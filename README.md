@@ -53,5 +53,5 @@ Author Information
 ------------------
 
 Inspired by:
-- Kevin Brebanov's [epel role](https://github.com/kbrebanov/ansible-epel.git))
-- Derek Carter's [epel role](https://github.com/goozbach-ansible/role-epel.git))
+- Kevin Brebanov's [epel role](https://github.com/kbrebanov/ansible-epel.git)
+- Derek Carter's [epel role](https://github.com/goozbach-ansible/role-epel.git)
