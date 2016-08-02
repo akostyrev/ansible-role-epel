@@ -1,7 +1,7 @@
 epel
 ====
 
-[![Build Status](https://travis-ci.org/kostyrevaa/ansible-epel.svg?branch=master)](https://travis-ci.org/kostyrevaa/ansible-epel)
+[![Build Status](https://travis-ci.org/kostyrevaa/ansible-role-epel.svg?branch=master)](https://travis-ci.org/kostyrevaa/ansible-role-epel)
 
 Installs and configures Yum EPEL repository.
 
