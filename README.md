@@ -1,7 +1,7 @@
 epel
 ====
 
-[![Build Status](https://travis-ci.org/kostyrevaa/ansible-epel.svg?branch=master)](https://travis-ci.org/kostyrevaa/ansible-epel)[![Ansible Role](https://img.shields.io/ansible/role/3290.svg)](https://galaxy.ansible.com/list#/roles/3290)
+[![Build Status](https://travis-ci.org/kostyrevaa/ansible-epel.svg?branch=master)](https://travis-ci.org/kostyrevaa/ansible-epel)
 
 Installs and configures Yum EPEL repository.
 
@@ -34,14 +34,14 @@ Install and enable EPEL repo
 ```
 - hosts: all
   roles:
-    - { role: kbrebanov.epel }
+    - { role: kostyrevaa.epel }
 ```
 
 Install and disable EPEL repo
 ```
 - hosts: all
   roles:
-    - { role: kbrebanov.epel, epel_repo_enabled: false }
+    - { role: kostyrevaa.epel, epel_repo_enabled: false }
 ```
 
 License
@@ -52,4 +52,6 @@ BSD
 Author Information
 ------------------
 
-Kevin Brebanov
+Inspired by:
+- Kevin Brebanov's [epel role](https://github.com/kbrebanov/ansible-epel.git))
+- Derek Carter's [epel role](https://github.com/goozbach-ansible/role-epel.git))
