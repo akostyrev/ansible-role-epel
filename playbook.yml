@@ -4,6 +4,8 @@
   tasks:
     - name: install packages for ansible support
       raw: yum -y install python-simplejson
+      changed_when: False
+
 
 - hosts: all
   roles:
