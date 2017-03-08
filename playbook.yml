@@ -9,7 +9,7 @@
 
 - hosts: all
   roles:
-    - role: ansible-role-epel
+    - role: .
       epel_repo_testing_enabled: true
   post_tasks:
     - name: install varnish from epel repo
