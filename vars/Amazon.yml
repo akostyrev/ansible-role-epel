@@ -1,3 +1,0 @@
----
-ansible_distribution_major_version: "6"
-gpgkey_file: "RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}"

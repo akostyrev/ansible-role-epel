@@ -1,32 +1,50 @@
 ---
 # tasks file for epel
 
-- name: Set OS dependent variables
-  include_vars: "{{ item }}"
-  with_first_found:
-   - "{{ ansible_distribution }}.yml"
-   - main.yml
-
 - name: Install EPEL package
   package:
     name: "epel-release"
     state: present
   tags: epel
 
-- name: Create epel.repo file
-  template: >
-    src=epel.repo.j2
-    dest=/etc/yum.repos.d/epel.repo
-    owner=root
-    group=root
-    mode=0644
-  tags: epel
+- name: epel_repo_enabled
+  ini_file:
+      path: /etc/yum.repos.d/epel.repo
+      section: epel
+      option: enabled
+      value: "{{ epel_repo_enabled | lower }}"
 
-- name: Create epel-testing.repo file
-  template: >
-    src=epel-testing.repo.j2
-    dest=/etc/yum.repos.d/epel-testing.repo
-    owner=root
-    group=root
-    mode=0644
-  tags: epel
+- name: epel_repo_debuginfo_enabled
+  ini_file:
+      path: /etc/yum.repos.d/epel.repo
+      section: epel-debuginfo
+      option: enabled
+      value: "{{ epel_repo_debuginfo_enabled | lower }}"
+
+- name: epel_repo_source_enabled
+  ini_file:
+      path: /etc/yum.repos.d/epel.repo
+      section: epel-source
+      option: enabled
+      value: "{{ epel_repo_source_enabled | lower }}"
+
+- name: epel_repo_testing_enabled
+  ini_file:
+      path: /etc/yum.repos.d/epel-testing.repo
+      section: epel-testing
+      option: enabled
+      value: "{{ epel_repo_testing_enabled | lower }}"
+
+- name: epel_repo_testing_debuginfo_enabled
+  ini_file:
+      path: /etc/yum.repos.d/epel-testing.repo
+      section: epel-testing-debuginfo
+      option: enabled
+      value: "{{ epel_repo_testing_debuginfo_enabled | lower }}"
+
+- name: epel_repo_testing_source_enabled
+  ini_file:
+      path: /etc/yum.repos.d/epel-testing.repo
+      section: epel-testing-source
+      option: enabled
+      value: "{{ epel_repo_testing_source_enabled | lower }}"
